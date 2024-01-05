@@ -5,7 +5,7 @@ import java.util.Date
 
 object DateUtils {
 
-    fun getPostDate(timeMillis:Int):String{
+    fun getPostDate(timeMillis: Long):String{
         val simpleDateFormat=SimpleDateFormat("DD/MM/YYYY hh:mm aa")
         val date=Date()
         date.time= timeMillis.toLong()

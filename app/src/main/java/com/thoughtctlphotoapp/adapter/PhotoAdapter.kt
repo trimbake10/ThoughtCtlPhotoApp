@@ -38,7 +38,7 @@ class PhotoAdapter @Inject constructor() : RecyclerView.Adapter<PhotoAdapter.Pho
                     //grid
                     tvPhotoName.text=title
                     tvPhotoCount.text= images_count.toString()
-                    tvPostDate.text= getPostDate(datetime)
+                    tvPostDate.text= getPostDate(datetime.toLong())
                     if (images?.isNotEmpty() == true) {
                         ivPhoto.load(images[0].link) {
                             crossfade(true)
@@ -58,7 +58,7 @@ class PhotoAdapter @Inject constructor() : RecyclerView.Adapter<PhotoAdapter.Pho
                     //list
                     tvPhotoNameList.text=title
                     tvPhotoCountList.text= images_count.toString()
-                    tvPostDateList.text= getPostDate(datetime)
+                    tvPostDateList.text= getPostDate(datetime.toLong())
                     if (images?.isNotEmpty() == true) {
                         ivPhotoList.load(images[0].link) {
                             crossfade(true)
